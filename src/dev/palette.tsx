@@ -8,14 +8,37 @@ import {
 import {
     Badge,
     Box,
-    Button, ButtonGroup,
+    Button,
+    ButtonGroup,
     Center,
     Checkbox,
     Circle,
     Container,
-    Editable, EditableInput,
-    EditablePreview, EditableTextarea, FormControl, FormHelperText, FormLabel, IconButton, Input,
-    Square
+    Editable,
+    EditableInput,
+    EditablePreview,
+    EditableTextarea,
+    FormControl,
+    FormHelperText,
+    FormLabel,
+    HStack,
+    IconButton,
+    Input,
+    NumberDecrementStepper,
+    NumberIncrementStepper,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    PinInput,
+    PinInputField,
+    Radio,
+    RadioGroup,
+    RangeSlider,
+    RangeSliderFilledTrack, RangeSliderThumb,
+    RangeSliderTrack, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack,
+    Square,
+    Stack,
+    Switch, Textarea
 } from "@chakra-ui/react";
 import {EmailIcon, SearchIcon} from "@chakra-ui/icons";
 
@@ -162,6 +185,118 @@ export const PaletteTree = () => (
                 </Variant>
                 <Variant name="password">
                     <Input pr='4.5rem' type='password' placeholder='Enter password'/>
+                </Variant>
+            </Component>
+            <Component name="NumberInput">
+                <Variant>
+                    <NumberInput step={5} defaultValue={15} min={10} max={30}>
+                        <NumberInputField />
+                        <NumberInputStepper>
+                            <NumberIncrementStepper />
+                            <NumberDecrementStepper />
+                        </NumberInputStepper>
+                    </NumberInput>
+                </Variant>
+            </Component>
+            <Component name="PinInput">
+                <Variant>
+                    <HStack>
+                        <PinInput>
+                            <PinInputField />
+                            <PinInputField />
+                            <PinInputField />
+                            <PinInputField />
+                        </PinInput>
+                    </HStack>
+                </Variant>
+            </Component>
+            <Component name="RadioGroup">
+                <Variant>
+                    <RadioGroup>
+                        <Stack direction='row'>
+                            <Radio value='1'>First</Radio>
+                            <Radio value='2'>Second</Radio>
+                            <Radio value='3'>Third</Radio>
+                        </Stack>
+                    </RadioGroup>
+                </Variant>
+            </Component>
+            <Component name="RangeSlider">
+                <Variant>
+                    <RangeSlider
+                        aria-label={['min', 'max']}
+                        colorScheme='pink'
+                        defaultValue={[10, 30]}
+                    >
+                        <RangeSliderTrack>
+                            <RangeSliderFilledTrack />
+                        </RangeSliderTrack>
+                        <RangeSliderThumb index={0} />
+                        <RangeSliderThumb index={1} />
+                    </RangeSlider>
+                </Variant>
+            </Component>
+            <Component name="Select">
+                <Variant>
+                    <Select placeholder='Select option'>
+                        <option value='option1'>Option 1</option>
+                        <option value='option2'>Option 2</option>
+                        <option value='option3'>Option 3</option>
+                    </Select>
+                </Variant>
+                <Variant name="outline">
+                    <Select variant='outline' placeholder='Outline'>
+                        <option value='option1'>Option 1</option>
+                        <option value='option2'>Option 2</option>
+                        <option value='option3'>Option 3</option>
+                    </Select>
+                </Variant>
+                <Variant name="filled">
+                    <Select variant='filled' placeholder='Filled'>
+                        <option value='option1'>Option 1</option>
+                        <option value='option2'>Option 2</option>
+                        <option value='option3'>Option 3</option>
+                    </Select>
+                </Variant>
+                <Variant name="flushed">
+                    <Select variant='flushed' placeholder='Flushed'>
+                        <option value='option1'>Option 1</option>
+                        <option value='option2'>Option 2</option>
+                        <option value='option3'>Option 3</option>
+                    </Select>
+                </Variant>
+                <Variant name="unstyled">
+                    <Select variant='unstyled' placeholder='Unstyled'>
+                        <option value='option1'>Option 1</option>
+                        <option value='option2'>Option 2</option>
+                        <option value='option3'>Option 3</option>
+                    </Select>
+                </Variant>
+            </Component>
+            <Component name="Slider">
+                <Variant>
+                    <Slider aria-label='slider-ex-1' defaultValue={30}>
+                        <SliderTrack>
+                            <SliderFilledTrack />
+                        </SliderTrack>
+                        <SliderThumb />
+                    </Slider>
+                </Variant>
+            </Component>
+            <Component name="Switch">
+                <Variant>
+                    <Switch />
+                </Variant>
+                <Variant name="small">
+                    <Switch size='sm' />
+                </Variant>
+                <Variant name="large">
+                    <Switch size='lg' />
+                </Variant>
+            </Component>
+            <Component name="Textarea">
+                <Variant>
+                    <Textarea placeholder='Here is a sample placeholder' />
                 </Variant>
             </Component>
         </Category>
