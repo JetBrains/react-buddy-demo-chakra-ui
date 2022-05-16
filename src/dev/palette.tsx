@@ -72,9 +72,20 @@ import {
     Thead,
     Td,
     Tr,
-    Tbody, Th, Tfoot, Tag, TagLabel, TagLeftIcon, TagCloseButton
+    Tbody,
+    Th,
+    Tfoot,
+    Tag,
+    TagLabel,
+    TagLeftIcon,
+    TagCloseButton,
+    Alert,
+    AlertIcon,
+    CircularProgress,
+    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast
 } from "@chakra-ui/react";
 import {AddIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
+import {VariantRoute} from "@react-buddy/ide-toolbox/dist/palette/variant-route";
 
 export const PaletteTree = () => (
     <Palette>
@@ -496,7 +507,7 @@ export const PaletteTree = () => (
                             <StatLabel>Sent</StatLabel>
                             <StatNumber>345,670</StatNumber>
                             <StatHelpText>
-                                <StatArrow type='increase' />
+                                <StatArrow type='increase'/>
                                 23.36%
                             </StatHelpText>
                         </Stat>
@@ -505,7 +516,7 @@ export const PaletteTree = () => (
                             <StatLabel>Clicked</StatLabel>
                             <StatNumber>45</StatNumber>
                             <StatHelpText>
-                                <StatArrow type='decrease' />
+                                <StatArrow type='decrease'/>
                                 9.05%
                             </StatHelpText>
                         </Stat>
@@ -596,7 +607,7 @@ export const PaletteTree = () => (
                 </Variant>
                 <Variant name="with icon">
                     <Tag variant='subtle' colorScheme='cyan'>
-                        <TagLeftIcon boxSize='12px' as={AddIcon} />
+                        <TagLeftIcon boxSize='12px' as={AddIcon}/>
                         <TagLabel>Cyan</TagLabel>
                     </Tag>
                 </Variant>
@@ -607,10 +618,120 @@ export const PaletteTree = () => (
                         colorScheme='green'
                     >
                         <TagLabel>Green</TagLabel>
-                        <TagCloseButton />
+                        <TagCloseButton/>
                     </Tag>
                 </Variant>
             </Component>
         </Category>
+        <Category name="Feedback">
+            <Component name="Alert">
+                <Variant>
+                    <Alert status='success' variant='subtle'>
+                        <AlertIcon/>
+                        Data uploaded to the server. Fire on!
+                    </Alert>
+                </Variant>
+                <Variant name="solid">
+                    <Alert status='success' variant='solid'>
+                        <AlertIcon/>
+                        Data uploaded to the server. Fire on!
+                    </Alert>
+                </Variant>
+                <Variant name="left-accent">
+                    <Alert status='success' variant='left-accent'>
+                        <AlertIcon/>
+                        Data uploaded to the server. Fire on!
+                    </Alert>
+                </Variant>
+                <Variant name="top-accent">
+                    <Alert status='success' variant='top-accent'>
+                        <AlertIcon/>
+                        Data uploaded to the server. Fire on!
+                    </Alert>
+                </Variant>
+                <Variant name="error">
+                    <Alert status='error'>
+                        <AlertIcon/>
+                        There was an error processing your request
+                    </Alert>
+                </Variant>
+                <Variant name="warning">
+                    <Alert status='warning'>
+                        <AlertIcon/>
+                        Seems your account is about expire, upgrade now
+                    </Alert>
+                </Variant>
+                <Variant name="info">
+                    <Alert status='info'>
+                        <AlertIcon/>
+                        Chakra is going live on August 30th. Get ready!
+                    </Alert>
+                </Variant>
+            </Component>
+            <Component name="CircularProgress">
+                <Variant>
+                    <CircularProgress value={80} />
+                </Variant>
+                <Variant name="with label">
+                    <CircularProgress value={40} color='green.400'>
+                        <CircularProgressLabel>40%</CircularProgressLabel>
+                    </CircularProgress>
+                </Variant>
+                <Variant name="indeterminate">
+                    <CircularProgress isIndeterminate color='green.300' />
+                </Variant>
+            </Component>
+            <Component name="Progress">
+                <Variant>
+                    <Progress value={80} w='100%'/>
+                </Variant>
+                <Variant name="indeterminate">
+                    <Progress size='xs' w='100%' isIndeterminate />
+                </Variant>
+            </Component>
+            <Component name="Skeleton">
+                <Variant>
+                    <Stack>
+                        <Skeleton height='20px' />
+                        <Skeleton height='20px' />
+                        <Skeleton height='20px' />
+                    </Stack>
+                </Variant>
+                <Variant name="circle and text">
+                    <Box padding='6' boxShadow='lg' bg='white' w='100%'>
+                        <SkeletonCircle size='10' />
+                        <SkeletonText mt='4' noOfLines={4} spacing='4' />
+                    </Box>
+                </Variant>
+            </Component>
+            <Component name="Spinner">
+                <Variant>
+                    <Spinner/>
+                </Variant>
+            </Component>
+            <Component name="Toast">
+                <Variant proto={ToastProto}/>
+            </Component>
+        </Category>
     </Palette>
 );
+
+
+export function ToastProto() {
+    const toast = useToast()
+    return (
+        <Button
+            onClick={() =>
+                toast({
+                    title: 'Account created.',
+                    description: "We've created your account for you.",
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
+                })
+            }
+        >
+            Show Toast
+        </Button>
+    )
+}
