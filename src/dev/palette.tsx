@@ -17,7 +17,7 @@ import {
     Editable,
     EditableInput,
     EditablePreview,
-    EditableTextarea,
+    EditableTextarea, Flex,
     FormControl,
     FormHelperText,
     FormLabel,
@@ -38,7 +38,9 @@ import {
     RangeSliderTrack, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack,
     Square,
     Stack,
-    Switch, Textarea
+    Switch,
+    Textarea,
+    Text, Grid, GridItem, SimpleGrid, VStack, WrapItem, Wrap
 } from "@chakra-ui/react";
 import {EmailIcon, SearchIcon} from "@chakra-ui/icons";
 
@@ -81,6 +83,92 @@ export const PaletteTree = () => (
                         engineering teams. It makes sure that our experiences have a consistent look
                         and feel, not just in our design specs, but in production
                     </Container>
+                </Variant>
+            </Component>
+            <Component name="Flex">
+                <Variant>
+                    <Flex color='white'>
+                        <Center w='100px' bg='green.500'>
+                            <Text>Box 1</Text>
+                        </Center>
+                        <Square bg='blue.500' size='150px'>
+                            <Text>Box 2</Text>
+                        </Square>
+                        <Box flex='1' bg='tomato'>
+                            <Text>Box 3</Text>
+                        </Box>
+                    </Flex>
+                </Variant>
+            </Component>
+            <Component name="Grid">
+                <Variant>
+                    <Grid
+                        h='200px'
+                        w='100%'
+                        templateRows='repeat(2, 1fr)'
+                        templateColumns='repeat(5, 1fr)'
+                        gap={4}
+                    >
+                        <GridItem rowSpan={2} colSpan={1} bg='tomato' />
+                        <GridItem colSpan={2} bg='papayawhip' />
+                        <GridItem colSpan={2} bg='papayawhip' />
+                        <GridItem colSpan={4} bg='tomato' />
+                    </Grid>
+                </Variant>
+            </Component>
+            <Component name="SimpleGrid">
+                <Variant>
+                    <SimpleGrid columns={2} spacing={10} w='100%'>
+                        <Box bg='tomato' height='80px'></Box>
+                        <Box bg='tomato' height='80px'></Box>
+                        <Box bg='tomato' height='80px'></Box>
+                        <Box bg='tomato' height='80px'></Box>
+                        <Box bg='tomato' height='80px'></Box>
+                    </SimpleGrid>
+                </Variant>
+            </Component>
+            <Component name="HStack">
+                <Variant>
+                    <HStack spacing='24px'>
+                        <Box w='40px' h='40px' bg='green.100'>1</Box>
+                        <Box w='40px' h='40px' bg='green.100'>2</Box>
+                        <Box w='40px' h='40px' bg='green.100'>3</Box>
+                    </HStack>
+                </Variant>
+            </Component>
+            <Component name="VStack">
+                <Variant>
+                    <VStack spacing='24px'>
+                        <Box w='40px' h='40px' bg='green.100'>1</Box>
+                        <Box w='40px' h='40px' bg='green.100'>2</Box>
+                        <Box w='40px' h='40px' bg='green.100'>3</Box>
+                    </VStack>
+                </Variant>
+            </Component>
+            <Component name="Wrap">
+                <Variant>
+                    <Wrap>
+                        <WrapItem>
+                            <Center w='180px' h='80px' bg='red.200'>
+                                Box 1
+                            </Center>
+                        </WrapItem>
+                        <WrapItem>
+                            <Center w='180px' h='80px' bg='green.200'>
+                                Box 2
+                            </Center>
+                        </WrapItem>
+                        <WrapItem>
+                            <Center w='180px' h='80px' bg='tomato'>
+                                Box 3
+                            </Center>
+                        </WrapItem>
+                        <WrapItem>
+                            <Center w='180px' h='80px' bg='blue.200'>
+                                Box 4
+                            </Center>
+                        </WrapItem>
+                    </Wrap>
                 </Variant>
             </Component>
         </Category>
