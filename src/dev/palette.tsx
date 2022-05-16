@@ -17,7 +17,8 @@ import {
     Editable,
     EditableInput,
     EditablePreview,
-    EditableTextarea, Flex,
+    EditableTextarea,
+    Flex,
     FormControl,
     FormHelperText,
     FormLabel,
@@ -34,15 +35,46 @@ import {
     Radio,
     RadioGroup,
     RangeSlider,
-    RangeSliderFilledTrack, RangeSliderThumb,
-    RangeSliderTrack, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack,
+    RangeSliderFilledTrack,
+    RangeSliderThumb,
+    RangeSliderTrack,
+    Select,
+    Slider,
+    SliderFilledTrack,
+    SliderThumb,
+    SliderTrack,
     Square,
     Stack,
     Switch,
     Textarea,
-    Text, Grid, GridItem, SimpleGrid, VStack, WrapItem, Wrap
+    Text,
+    Grid,
+    GridItem,
+    SimpleGrid,
+    VStack,
+    WrapItem,
+    Wrap,
+    Code,
+    Divider,
+    Kbd,
+    UnorderedList,
+    ListItem,
+    OrderedList,
+    Stat,
+    StatLabel,
+    StatNumber,
+    StatHelpText,
+    StatGroup,
+    StatArrow,
+    TableContainer,
+    Table,
+    TableCaption,
+    Thead,
+    Td,
+    Tr,
+    Tbody, Th, Tfoot, Tag, TagLabel, TagLeftIcon, TagCloseButton
 } from "@chakra-ui/react";
-import {EmailIcon, SearchIcon} from "@chakra-ui/icons";
+import {AddIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
 
 export const PaletteTree = () => (
     <Palette>
@@ -109,10 +141,10 @@ export const PaletteTree = () => (
                         templateColumns='repeat(5, 1fr)'
                         gap={4}
                     >
-                        <GridItem rowSpan={2} colSpan={1} bg='tomato' />
-                        <GridItem colSpan={2} bg='papayawhip' />
-                        <GridItem colSpan={2} bg='papayawhip' />
-                        <GridItem colSpan={4} bg='tomato' />
+                        <GridItem rowSpan={2} colSpan={1} bg='tomato'/>
+                        <GridItem colSpan={2} bg='papayawhip'/>
+                        <GridItem colSpan={2} bg='papayawhip'/>
+                        <GridItem colSpan={4} bg='tomato'/>
                     </Grid>
                 </Variant>
             </Component>
@@ -187,7 +219,7 @@ export const PaletteTree = () => (
                     <Button variant='link'>Button</Button>
                 </Variant>
                 <Variant name="with icon">
-                    <Button leftIcon={<EmailIcon />} colorScheme='teal' variant='solid'>Email</Button>
+                    <Button leftIcon={<EmailIcon/>} colorScheme='teal' variant='solid'>Email</Button>
                 </Variant>
                 <Variant name="is loading">
                     <Button
@@ -230,14 +262,14 @@ export const PaletteTree = () => (
             <Component name="Editable">
                 <Variant name="input">
                     <Editable defaultValue='Take some chakra'>
-                        <EditablePreview />
-                        <EditableInput />
+                        <EditablePreview/>
+                        <EditableInput/>
                     </Editable>
                 </Variant>
                 <Variant name="textarea">
                     <Editable defaultValue='Take some chakra'>
-                        <EditablePreview />
-                        <EditableTextarea />
+                        <EditablePreview/>
+                        <EditableTextarea/>
                     </Editable>
                 </Variant>
             </Component>
@@ -245,31 +277,31 @@ export const PaletteTree = () => (
                 <Variant>
                     <FormControl>
                         <FormLabel htmlFor='email'>Email address</FormLabel>
-                        <Input id='email' type='email' />
+                        <Input id='email' type='email'/>
                         <FormHelperText>We'll never share your email.</FormHelperText>
                     </FormControl>
                 </Variant>
             </Component>
             <Component name="IconButton">
                 <Variant>
-                    <IconButton aria-label='Search database' icon={<SearchIcon />} />
+                    <IconButton aria-label='Search database' icon={<SearchIcon/>}/>
                 </Variant>
             </Component>
             <Component name="Input">
                 <Variant>
-                    <Input placeholder='Basic usage' />
+                    <Input placeholder='Basic usage'/>
                 </Variant>
                 <Variant name="outline">
-                    <Input variant='outline' placeholder='Outline' />
+                    <Input variant='outline' placeholder='Outline'/>
                 </Variant>
                 <Variant name="filled">
-                    <Input variant='filled' placeholder='Filled' />
+                    <Input variant='filled' placeholder='Filled'/>
                 </Variant>
                 <Variant name="flushed">
-                    <Input variant='flushed' placeholder='Flushed' />
+                    <Input variant='flushed' placeholder='Flushed'/>
                 </Variant>
                 <Variant name="unstyled">
-                    <Input variant='unstyled' placeholder='Unstyled' />
+                    <Input variant='unstyled' placeholder='Unstyled'/>
                 </Variant>
                 <Variant name="password">
                     <Input pr='4.5rem' type='password' placeholder='Enter password'/>
@@ -278,10 +310,10 @@ export const PaletteTree = () => (
             <Component name="NumberInput">
                 <Variant>
                     <NumberInput step={5} defaultValue={15} min={10} max={30}>
-                        <NumberInputField />
+                        <NumberInputField/>
                         <NumberInputStepper>
-                            <NumberIncrementStepper />
-                            <NumberDecrementStepper />
+                            <NumberIncrementStepper/>
+                            <NumberDecrementStepper/>
                         </NumberInputStepper>
                     </NumberInput>
                 </Variant>
@@ -290,10 +322,10 @@ export const PaletteTree = () => (
                 <Variant>
                     <HStack>
                         <PinInput>
-                            <PinInputField />
-                            <PinInputField />
-                            <PinInputField />
-                            <PinInputField />
+                            <PinInputField/>
+                            <PinInputField/>
+                            <PinInputField/>
+                            <PinInputField/>
                         </PinInput>
                     </HStack>
                 </Variant>
@@ -317,10 +349,10 @@ export const PaletteTree = () => (
                         defaultValue={[10, 30]}
                     >
                         <RangeSliderTrack>
-                            <RangeSliderFilledTrack />
+                            <RangeSliderFilledTrack/>
                         </RangeSliderTrack>
-                        <RangeSliderThumb index={0} />
-                        <RangeSliderThumb index={1} />
+                        <RangeSliderThumb index={0}/>
+                        <RangeSliderThumb index={1}/>
                     </RangeSlider>
                 </Variant>
             </Component>
@@ -365,26 +397,26 @@ export const PaletteTree = () => (
                 <Variant>
                     <Slider aria-label='slider-ex-1' defaultValue={30}>
                         <SliderTrack>
-                            <SliderFilledTrack />
+                            <SliderFilledTrack/>
                         </SliderTrack>
-                        <SliderThumb />
+                        <SliderThumb/>
                     </Slider>
                 </Variant>
             </Component>
             <Component name="Switch">
                 <Variant>
-                    <Switch />
+                    <Switch/>
                 </Variant>
                 <Variant name="small">
-                    <Switch size='sm' />
+                    <Switch size='sm'/>
                 </Variant>
                 <Variant name="large">
-                    <Switch size='lg' />
+                    <Switch size='lg'/>
                 </Variant>
             </Component>
             <Component name="Textarea">
                 <Variant>
-                    <Textarea placeholder='Here is a sample placeholder' />
+                    <Textarea placeholder='Here is a sample placeholder'/>
                 </Variant>
             </Component>
         </Category>
@@ -410,6 +442,173 @@ export const PaletteTree = () => (
                 </Variant>
                 <Variant name="purple">
                     <Badge colorScheme='purple'>New</Badge>
+                </Variant>
+            </Component>
+            <Component name="Code">
+                <Variant>
+                    <Code>Hello world</Code>
+                </Variant>
+            </Component>
+            <Component name="Divider">
+                <Variant name="horizontal">
+                    <Divider orientation='horizontal'/>
+                </Variant>
+                <Variant name="vertical">
+                    <Divider orientation='vertical'/>
+                </Variant>
+            </Component>
+            <Component name="Kbd">
+                <Variant>
+                    <span>
+                        <Kbd>shift</Kbd> + <Kbd>H</Kbd>
+                    </span>
+                </Variant>
+            </Component>
+            <Component name="List">
+                <Variant name="unordered">
+                    <UnorderedList>
+                        <ListItem>Lorem ipsum dolor sit amet</ListItem>
+                        <ListItem>Consectetur adipiscing elit</ListItem>
+                        <ListItem>Integer molestie lorem at massa</ListItem>
+                        <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                    </UnorderedList>
+                </Variant>
+                <Variant name="ordered">
+                    <OrderedList>
+                        <ListItem>Lorem ipsum dolor sit amet</ListItem>
+                        <ListItem>Consectetur adipiscing elit</ListItem>
+                        <ListItem>Integer molestie lorem at massa</ListItem>
+                        <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                    </OrderedList>
+                </Variant>
+            </Component>
+            <Component name="Stat">
+                <Variant>
+                    <Stat>
+                        <StatLabel>Collected Fees</StatLabel>
+                        <StatNumber>£0.00</StatNumber>
+                        <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+                    </Stat>
+                </Variant>
+                <Variant name="with indicator">
+                    <StatGroup>
+                        <Stat>
+                            <StatLabel>Sent</StatLabel>
+                            <StatNumber>345,670</StatNumber>
+                            <StatHelpText>
+                                <StatArrow type='increase' />
+                                23.36%
+                            </StatHelpText>
+                        </Stat>
+
+                        <Stat>
+                            <StatLabel>Clicked</StatLabel>
+                            <StatNumber>45</StatNumber>
+                            <StatHelpText>
+                                <StatArrow type='decrease' />
+                                9.05%
+                            </StatHelpText>
+                        </Stat>
+                    </StatGroup>
+                </Variant>
+            </Component>
+            <Component name="Table">
+                <Variant>
+                    <TableContainer>
+                        <Table variant='simple'>
+                            <TableCaption>Imperial to metric conversion factors</TableCaption>
+                            <Thead>
+                                <Tr>
+                                    <Th>To convert</Th>
+                                    <Th>into</Th>
+                                    <Th isNumeric>multiply by</Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                <Tr>
+                                    <Td>inches</Td>
+                                    <Td>millimetres (mm)</Td>
+                                    <Td isNumeric>25.4</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td>feet</Td>
+                                    <Td>centimetres (cm)</Td>
+                                    <Td isNumeric>30.48</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td>yards</Td>
+                                    <Td>metres (m)</Td>
+                                    <Td isNumeric>0.91444</Td>
+                                </Tr>
+                            </Tbody>
+                            <Tfoot>
+                                <Tr>
+                                    <Th>To convert</Th>
+                                    <Th>into</Th>
+                                    <Th isNumeric>multiply by</Th>
+                                </Tr>
+                            </Tfoot>
+                        </Table>
+                    </TableContainer>
+                </Variant>
+                <Variant name="Striped">
+                    <TableContainer>
+                        <Table variant='striped' colorScheme='teal'>
+                            <TableCaption>Imperial to metric conversion factors</TableCaption>
+                            <Thead>
+                                <Tr>
+                                    <Th>To convert</Th>
+                                    <Th>into</Th>
+                                    <Th isNumeric>multiply by</Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                <Tr>
+                                    <Td>inches</Td>
+                                    <Td>millimetres (mm)</Td>
+                                    <Td isNumeric>25.4</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td>feet</Td>
+                                    <Td>centimetres (cm)</Td>
+                                    <Td isNumeric>30.48</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td>yards</Td>
+                                    <Td>metres (m)</Td>
+                                    <Td isNumeric>0.91444</Td>
+                                </Tr>
+                            </Tbody>
+                            <Tfoot>
+                                <Tr>
+                                    <Th>To convert</Th>
+                                    <Th>into</Th>
+                                    <Th isNumeric>multiply by</Th>
+                                </Tr>
+                            </Tfoot>
+                        </Table>
+                    </TableContainer>
+                </Variant>
+            </Component>
+            <Component name="Tag">
+                <Variant>
+                    <Tag>Sample Tag</Tag>
+                </Variant>
+                <Variant name="with icon">
+                    <Tag variant='subtle' colorScheme='cyan'>
+                        <TagLeftIcon boxSize='12px' as={AddIcon} />
+                        <TagLabel>Cyan</TagLabel>
+                    </Tag>
+                </Variant>
+                <Variant name="with close button">
+                    <Tag
+                        borderRadius='full'
+                        variant='solid'
+                        colorScheme='green'
+                    >
+                        <TagLabel>Green</TagLabel>
+                        <TagCloseButton />
+                    </Tag>
                 </Variant>
             </Component>
         </Category>
