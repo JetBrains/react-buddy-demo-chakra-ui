@@ -82,7 +82,7 @@ import {
     Alert,
     AlertIcon,
     CircularProgress,
-    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast
+    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast, Heading
 } from "@chakra-ui/react";
 import {AddIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
 import {VariantRoute} from "@react-buddy/ide-toolbox/dist/palette/variant-route";
@@ -670,7 +670,7 @@ export const PaletteTree = () => (
             </Component>
             <Component name="CircularProgress">
                 <Variant>
-                    <CircularProgress value={80} />
+                    <CircularProgress value={80}/>
                 </Variant>
                 <Variant name="with label">
                     <CircularProgress value={40} color='green.400'>
@@ -678,7 +678,7 @@ export const PaletteTree = () => (
                     </CircularProgress>
                 </Variant>
                 <Variant name="indeterminate">
-                    <CircularProgress isIndeterminate color='green.300' />
+                    <CircularProgress isIndeterminate color='green.300'/>
                 </Variant>
             </Component>
             <Component name="Progress">
@@ -686,21 +686,21 @@ export const PaletteTree = () => (
                     <Progress value={80} w='100%'/>
                 </Variant>
                 <Variant name="indeterminate">
-                    <Progress size='xs' w='100%' isIndeterminate />
+                    <Progress size='xs' w='100%' isIndeterminate/>
                 </Variant>
             </Component>
             <Component name="Skeleton">
                 <Variant>
                     <Stack>
-                        <Skeleton height='20px' />
-                        <Skeleton height='20px' />
-                        <Skeleton height='20px' />
+                        <Skeleton height='20px'/>
+                        <Skeleton height='20px'/>
+                        <Skeleton height='20px'/>
                     </Stack>
                 </Variant>
                 <Variant name="circle and text">
                     <Box padding='6' boxShadow='lg' bg='white' w='100%'>
-                        <SkeletonCircle size='10' />
-                        <SkeletonText mt='4' noOfLines={4} spacing='4' />
+                        <SkeletonCircle size='10'/>
+                        <SkeletonText mt='4' noOfLines={4} spacing='4'/>
                     </Box>
                 </Variant>
             </Component>
@@ -711,6 +711,118 @@ export const PaletteTree = () => (
             </Component>
             <Component name="Toast">
                 <Variant proto={ToastProto}/>
+            </Component>
+        </Category>
+        <Category name="Typography">
+            <Component name="Text">
+                <Variant name="truncated">
+                    <Text color='gray.500' isTruncated>
+                        Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                        publishing industries for previewing layouts and visual mockups.
+                    </Text>
+                </Variant>
+                <Variant name="size 6xl">
+                    <Text fontSize='6xl'>(6xl) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size 5xl">
+                    <Text fontSize='5xl'>(5xl) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size 4xl">
+                    <Text fontSize='4xl'>(4xl) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size 3xl">
+                    <Text fontSize='3xl'>(3xl) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size 2xl">
+                    <Text fontSize='2xl'>(2xl) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size xl">
+                    <Text fontSize='xl'>(xl) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size lg">
+                    <Text fontSize='lg'>(lg) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size md">
+                    <Text fontSize='md'>(md) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size sm">
+                    <Text fontSize='sm'>(sm) In love with React & Next</Text>
+                </Variant>
+                <Variant name="size xs">
+                    <Text fontSize='xs'>(xs) In love with React & Next</Text>
+                </Variant>
+                <Variant name="i">
+                    <Text as='i'>Italic</Text>
+                </Variant>
+                <Variant name="u">
+                    <Text as='u'>Underline</Text>
+                </Variant>
+                <Variant name="abbr">
+                    <Text as='abbr'>I18N</Text>
+                </Variant>
+                <Variant name="cite">
+                    <Text as='cite'>Citation</Text>
+                </Variant>
+                <Variant name="del">
+                    <Text as='del'>Deleted</Text>
+                </Variant>
+                <Variant name="em">
+                    <Text as='em'>Emphasis</Text>
+                </Variant>
+                <Variant name="ins">
+                    <Text as='ins'>Inserted</Text>
+                </Variant>
+                <Variant name="kbd">
+                    <Text as='kbd'>Ctrl + C</Text>
+                </Variant>
+                <Variant name="mark">
+                    <Text as='mark'>Highlighted</Text>
+                </Variant>
+                <Variant name="s">
+                    <Text as='s'>Strikethrough</Text>
+                </Variant>
+                <Variant name="samp">
+                    <Text as='samp'>Sample</Text>
+                </Variant>
+                <Variant name="sub">
+                    <Text as='sub'>sub</Text>
+                </Variant>
+                <Variant name="sup">
+                    <Text as='cite'>Citation</Text>
+                    <Text as='sup'>sup</Text>
+                </Variant>
+            </Component>
+            <Component name="Heading">
+                <Variant name="h1">
+                    <Heading as='h1' size='4xl' isTruncated>
+                        (4xl) In love with React & Next
+                    </Heading>
+                </Variant>
+                <Variant name="h2">
+                    <Heading as='h2' size='3xl' isTruncated>
+                        (3xl) In love with React & Next
+                    </Heading>
+                </Variant>
+                <Variant name="h3">
+                    <Heading as='h3' size='lg'>
+                        (lg) In love with React & Next
+                    </Heading>
+                </Variant>
+                <Variant name="h4">
+                    <Heading as='h4' size='md'>
+                        (md) In love with React & Next
+                    </Heading>
+                </Variant>
+                <Variant name="h5">
+                    <Heading as='h5' size='sm'>
+                        (sm) In love with React & Next
+                    </Heading>
+                </Variant>
+                <Variant name="h6">
+                    <Heading as='h6' size='xs'>
+                        (xs) In love with React & Next
+                    </Heading>
+                </Variant>
             </Component>
         </Category>
     </Palette>
