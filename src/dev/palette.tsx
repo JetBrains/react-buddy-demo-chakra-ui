@@ -82,9 +82,9 @@ import {
     Alert,
     AlertIcon,
     CircularProgress,
-    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast, Heading
+    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast, Heading, AlertDialog, AlertDialogOverlay, AlertDialogHeader, AlertDialogCloseButton, AlertDialogContent, AlertDialogBody, AlertDialogFooter, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Menu, MenuList, MenuItem, MenuButton, Modal, ModalCloseButton, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter
 } from "@chakra-ui/react";
-import {AddIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
+import {AddIcon, ChevronDownIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
 import {VariantRoute} from "@react-buddy/ide-toolbox/dist/palette/variant-route";
 
 export const PaletteTree = () => (
@@ -284,7 +284,7 @@ export const PaletteTree = () => (
                     </Editable>
                 </Variant>
             </Component>
-            <Component name="FormControl">
+            <Component name="FormControl" subComponents={[<FormLabel/>, <FormHelperText/>]}>
                 <Variant>
                     <FormControl>
                         <FormLabel htmlFor='email'>Email address</FormLabel>
@@ -475,7 +475,7 @@ export const PaletteTree = () => (
                     </span>
                 </Variant>
             </Component>
-            <Component name="List">
+            <Component name="List" subComponents={[<ListItem/>]}>
                 <Variant name="unordered">
                     <UnorderedList>
                         <ListItem>Lorem ipsum dolor sit amet</ListItem>
@@ -822,6 +822,100 @@ export const PaletteTree = () => (
                     <Heading as='h6' size='xs'>
                         (xs) In love with React & Next
                     </Heading>
+                </Variant>
+            </Component>
+        </Category>
+        <Category name="Overlay">
+            <Component name="AlertDialog">
+                <Variant>
+                    <AlertDialog
+                        motionPreset='slideInBottom'
+                        isOpen={true}
+                        leastDestructiveRef={undefined/*todo*/}
+                        onClose={() => {/*todo*/}}
+                        isCentered
+                    >
+                        <AlertDialogOverlay />
+                        <AlertDialogContent>
+                            <AlertDialogHeader>Discard Changes?</AlertDialogHeader>
+                            <AlertDialogCloseButton />
+                            <AlertDialogBody>
+                                Are you sure you want to discard all of your notes? 44 words will be
+                                deleted.
+                            </AlertDialogBody>
+                            <AlertDialogFooter>
+                                <Button onClick={() => {/*todo*/}}>
+                                    No
+                                </Button>
+                                <Button colorScheme='red' ml={3}>
+                                    Yes
+                                </Button>
+                            </AlertDialogFooter>
+                        </AlertDialogContent>
+                    </AlertDialog>
+                </Variant>
+            </Component>
+            <Component name="Drawer">
+                <Variant>
+                    <Drawer
+                        isOpen={true}
+                        placement='right'
+                        onClose={() => {/*todo*/}}
+                        finalFocusRef={undefined /*todo*/}
+                    >
+                        <DrawerOverlay />
+                        <DrawerContent>
+                            <DrawerCloseButton />
+                            <DrawerHeader>Create your account</DrawerHeader>
+
+                            <DrawerBody>
+                                <Input placeholder='Type here...' />
+                            </DrawerBody>
+
+                            <DrawerFooter>
+                                <Button variant='outline' mr={3} onClick={() => {/*todo*/}}>
+                                    Cancel
+                                </Button>
+                                <Button colorScheme='blue'>Save</Button>
+                            </DrawerFooter>
+                        </DrawerContent>
+                    </Drawer>
+                </Variant>
+            </Component>
+            <Component name="Menu">
+                <Variant>
+                    <Menu>
+                        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Actions
+                        </MenuButton>
+                        <MenuList>
+                            <MenuItem>Download</MenuItem>
+                            <MenuItem>Create a Copy</MenuItem>
+                            <MenuItem>Mark as Draft</MenuItem>
+                            <MenuItem>Delete</MenuItem>
+                            <MenuItem>Attend a Workshop</MenuItem>
+                        </MenuList>
+                    </Menu>
+                </Variant>
+            </Component>
+            <Component name="Modal">
+                <Variant>
+                    <Modal isOpen={true} onClose={()=>{/*todo*/}}>
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader>Modal Title</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody>
+                                Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button colorScheme='blue' mr={3} onClick={()=>{/*todo*/}}>
+                                    Close
+                                </Button>
+                                <Button variant='ghost'>Secondary Action</Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
                 </Variant>
             </Component>
         </Category>
