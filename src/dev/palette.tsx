@@ -82,10 +82,9 @@ import {
     Alert,
     AlertIcon,
     CircularProgress,
-    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast, Heading, AlertDialog, AlertDialogOverlay, AlertDialogHeader, AlertDialogCloseButton, AlertDialogContent, AlertDialogBody, AlertDialogFooter, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Menu, MenuList, MenuItem, MenuButton, Modal, ModalCloseButton, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter
+    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast, Heading, AlertDialog, AlertDialogOverlay, AlertDialogHeader, AlertDialogCloseButton, AlertDialogContent, AlertDialogBody, AlertDialogFooter, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Menu, MenuList, MenuItem, MenuButton, Modal, ModalCloseButton, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, Popover, PopoverTrigger, PopoverContent, PopoverCloseButton, PopoverArrow, PopoverBody, PopoverHeader, Tooltip
 } from "@chakra-ui/react";
 import {AddIcon, ChevronDownIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
-import {VariantRoute} from "@react-buddy/ide-toolbox/dist/palette/variant-route";
 
 export const PaletteTree = () => (
     <Palette>
@@ -916,6 +915,28 @@ export const PaletteTree = () => (
                             </ModalFooter>
                         </ModalContent>
                     </Modal>
+                </Variant>
+            </Component>
+            <Component name="Popover">
+                <Variant>
+                    <Popover>
+                        <PopoverTrigger>
+                            <Button>Trigger</Button>
+                        </PopoverTrigger>
+                        <PopoverContent>
+                            <PopoverArrow />
+                            <PopoverCloseButton />
+                            <PopoverHeader>Confirmation!</PopoverHeader>
+                            <PopoverBody>Are you sure you want to have that milkshake?</PopoverBody>
+                        </PopoverContent>
+                    </Popover>
+                </Variant>
+            </Component>
+            <Component name="Tooltip">
+                <Variant>
+                    <Tooltip label="Hey, I'm here!" aria-label='A tooltip'>
+                        Hover me
+                    </Tooltip>
                 </Variant>
             </Component>
         </Category>
