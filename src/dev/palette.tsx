@@ -25,6 +25,7 @@ import {
     HStack,
     IconButton,
     Input,
+    Image,
     NumberDecrementStepper,
     NumberIncrementStepper,
     NumberInput,
@@ -137,7 +138,7 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Link, LinkBox, LinkOverlay
+    Link, LinkBox, LinkOverlay, Avatar
 } from "@chakra-ui/react";
 import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, ExternalLinkIcon, SearchIcon} from "@chakra-ui/icons";
 
@@ -1068,7 +1069,7 @@ export const PaletteTree = () => (
                 <Variant>
                     <Button>
                         <VisuallyHidden>Checkmark</VisuallyHidden>
-                        <CheckIcon />
+                        <CheckIcon/>
                     </Button>
                 </Variant>
             </Component>
@@ -1095,7 +1096,7 @@ export const PaletteTree = () => (
                 </Variant>
                 <Variant name="external">
                     <Link href='https://chakra-ui.com' isExternal>
-                        Chakra Design system <ExternalLinkIcon mx='2px' />
+                        Chakra Design system <ExternalLinkIcon mx='2px'/>
                     </Link>
                 </Variant>
             </Component>
@@ -1108,6 +1109,48 @@ export const PaletteTree = () => (
                             </LinkOverlay>
                         </Heading>
                     </LinkBox>
+                </Variant>
+            </Component>
+        </Category>
+        <Category name="Media and Icons">
+            <Component name="Avatar">
+                <Variant>
+                    <Wrap>
+                        <WrapItem>
+                            <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov'/>
+                        </WrapItem>
+                        <WrapItem>
+                            <Avatar name='Kola Tioluwani' src='https://bit.ly/tioluwani-kolawole'/>
+                        </WrapItem>
+                        <WrapItem>
+                            <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'/>
+                        </WrapItem>
+                        <WrapItem>
+                            <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence'/>
+                        </WrapItem>
+                        <WrapItem>
+                            <Avatar name='Prosper Otemuyiwa' src='https://bit.ly/prosper-baba'/>
+                        </WrapItem>
+                        <WrapItem>
+                            <Avatar name='Christian Nwamba' src='https://bit.ly/code-beast'/>
+                        </WrapItem>
+                        <WrapItem>
+                            <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo'/>
+                        </WrapItem>
+                    </Wrap>
+                </Variant>
+            </Component>
+            <Component name="Icon">
+                <Variant>
+                    <AddIcon w={6} h={6} />
+                </Variant>
+                {/*todo provide all icons*/}
+            </Component>
+            <Component name="Image">
+                <Variant>
+                    <Box boxSize='sm'>
+                        <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+                    </Box>
                 </Variant>
             </Component>
         </Category>
