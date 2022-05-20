@@ -82,9 +82,54 @@ import {
     Alert,
     AlertIcon,
     CircularProgress,
-    CircularProgressLabel, Progress, Skeleton, SkeletonCircle, SkeletonText, Spinner, useToast, Heading, AlertDialog, AlertDialogOverlay, AlertDialogHeader, AlertDialogCloseButton, AlertDialogContent, AlertDialogBody, AlertDialogFooter, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Menu, MenuList, MenuItem, MenuButton, Modal, ModalCloseButton, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, Popover, PopoverTrigger, PopoverContent, PopoverCloseButton, PopoverArrow, PopoverBody, PopoverHeader, Tooltip
+    CircularProgressLabel,
+    Progress,
+    Skeleton,
+    SkeletonCircle,
+    SkeletonText,
+    Spinner,
+    useToast,
+    Heading,
+    AlertDialog,
+    AlertDialogOverlay,
+    AlertDialogHeader,
+    AlertDialogCloseButton,
+    AlertDialogContent,
+    AlertDialogBody,
+    AlertDialogFooter,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody,
+    DrawerFooter,
+    Menu,
+    MenuList,
+    MenuItem,
+    MenuButton,
+    Modal,
+    ModalCloseButton,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverCloseButton,
+    PopoverArrow,
+    PopoverBody,
+    PopoverHeader,
+    Tooltip,
+    AccordionItem,
+    AccordionButton,
+    Accordion,
+    AccordionIcon,
+    AccordionPanel, Tabs, TabList, Tab, TabPanel, TabPanels, VisuallyHidden
 } from "@chakra-ui/react";
-import {AddIcon, ChevronDownIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
+import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
 
 export const PaletteTree = () => (
     <Palette>
@@ -831,19 +876,21 @@ export const PaletteTree = () => (
                         motionPreset='slideInBottom'
                         isOpen={true}
                         leastDestructiveRef={undefined/*todo*/}
-                        onClose={() => {/*todo*/}}
+                        onClose={() => {/*todo*/
+                        }}
                         isCentered
                     >
-                        <AlertDialogOverlay />
+                        <AlertDialogOverlay/>
                         <AlertDialogContent>
                             <AlertDialogHeader>Discard Changes?</AlertDialogHeader>
-                            <AlertDialogCloseButton />
+                            <AlertDialogCloseButton/>
                             <AlertDialogBody>
                                 Are you sure you want to discard all of your notes? 44 words will be
                                 deleted.
                             </AlertDialogBody>
                             <AlertDialogFooter>
-                                <Button onClick={() => {/*todo*/}}>
+                                <Button onClick={() => {/*todo*/
+                                }}>
                                     No
                                 </Button>
                                 <Button colorScheme='red' ml={3}>
@@ -859,20 +906,22 @@ export const PaletteTree = () => (
                     <Drawer
                         isOpen={true}
                         placement='right'
-                        onClose={() => {/*todo*/}}
+                        onClose={() => {/*todo*/
+                        }}
                         finalFocusRef={undefined /*todo*/}
                     >
-                        <DrawerOverlay />
+                        <DrawerOverlay/>
                         <DrawerContent>
-                            <DrawerCloseButton />
+                            <DrawerCloseButton/>
                             <DrawerHeader>Create your account</DrawerHeader>
 
                             <DrawerBody>
-                                <Input placeholder='Type here...' />
+                                <Input placeholder='Type here...'/>
                             </DrawerBody>
 
                             <DrawerFooter>
-                                <Button variant='outline' mr={3} onClick={() => {/*todo*/}}>
+                                <Button variant='outline' mr={3} onClick={() => {/*todo*/
+                                }}>
                                     Cancel
                                 </Button>
                                 <Button colorScheme='blue'>Save</Button>
@@ -884,7 +933,7 @@ export const PaletteTree = () => (
             <Component name="Menu">
                 <Variant>
                     <Menu>
-                        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                        <MenuButton as={Button} rightIcon={<ChevronDownIcon/>}>
                             Actions
                         </MenuButton>
                         <MenuList>
@@ -899,16 +948,19 @@ export const PaletteTree = () => (
             </Component>
             <Component name="Modal">
                 <Variant>
-                    <Modal isOpen={true} onClose={()=>{/*todo*/}}>
-                        <ModalOverlay />
+                    <Modal isOpen={true} onClose={() => {/*todo*/
+                    }}>
+                        <ModalOverlay/>
                         <ModalContent>
                             <ModalHeader>Modal Title</ModalHeader>
-                            <ModalCloseButton />
+                            <ModalCloseButton/>
                             <ModalBody>
-                                Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+                                Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id
+                                consequat veniam incididunt duis in sint irure nisi.
                             </ModalBody>
                             <ModalFooter>
-                                <Button colorScheme='blue' mr={3} onClick={()=>{/*todo*/}}>
+                                <Button colorScheme='blue' mr={3} onClick={() => {/*todo*/
+                                }}>
                                     Close
                                 </Button>
                                 <Button variant='ghost'>Secondary Action</Button>
@@ -924,8 +976,8 @@ export const PaletteTree = () => (
                             <Button>Trigger</Button>
                         </PopoverTrigger>
                         <PopoverContent>
-                            <PopoverArrow />
-                            <PopoverCloseButton />
+                            <PopoverArrow/>
+                            <PopoverCloseButton/>
                             <PopoverHeader>Confirmation!</PopoverHeader>
                             <PopoverBody>Are you sure you want to have that milkshake?</PopoverBody>
                         </PopoverContent>
@@ -937,6 +989,77 @@ export const PaletteTree = () => (
                     <Tooltip label="Hey, I'm here!" aria-label='A tooltip'>
                         Hover me
                     </Tooltip>
+                </Variant>
+            </Component>
+        </Category>
+        <Category name="Disclosure">
+            <Component name="Accordion">
+                <Variant>
+                    <Accordion>
+                        <AccordionItem>
+                            <h2>
+                                <AccordionButton>
+                                    <Box flex='1' textAlign='left'>
+                                        Section 1 title
+                                    </Box>
+                                    <AccordionIcon/>
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={4}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </AccordionPanel>
+                        </AccordionItem>
+
+                        <AccordionItem>
+                            <h2>
+                                <AccordionButton>
+                                    <Box flex='1' textAlign='left'>
+                                        Section 2 title
+                                    </Box>
+                                    <AccordionIcon/>
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={4}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </AccordionPanel>
+                        </AccordionItem>
+                    </Accordion>
+                </Variant>
+            </Component>
+            <Component name="Tabs">
+                <Variant>
+                    <Tabs>
+                        <TabList>
+                            <Tab>One</Tab>
+                            <Tab>Two</Tab>
+                            <Tab>Three</Tab>
+                        </TabList>
+                        <TabPanels>
+                            <TabPanel>
+                                <p>one!</p>
+                            </TabPanel>
+                            <TabPanel>
+                                <p>two!</p>
+                            </TabPanel>
+                            <TabPanel>
+                                <p>three!</p>
+                            </TabPanel>
+                        </TabPanels>
+                    </Tabs>
+                </Variant>
+            </Component>
+            <Component name="VisuallyHidden">
+                <Variant>
+                    <Button>
+                        <VisuallyHidden>Checkmark</VisuallyHidden>
+                        <CheckIcon />
+                    </Button>
                 </Variant>
             </Component>
         </Category>
