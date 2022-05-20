@@ -127,9 +127,19 @@ import {
     AccordionButton,
     Accordion,
     AccordionIcon,
-    AccordionPanel, Tabs, TabList, Tab, TabPanel, TabPanels, VisuallyHidden
+    AccordionPanel,
+    Tabs,
+    TabList,
+    Tab,
+    TabPanel,
+    TabPanels,
+    VisuallyHidden,
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    Link, LinkBox, LinkOverlay
 } from "@chakra-ui/react";
-import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, SearchIcon} from "@chakra-ui/icons";
+import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, ExternalLinkIcon, SearchIcon} from "@chakra-ui/icons";
 
 export const PaletteTree = () => (
     <Palette>
@@ -1060,6 +1070,44 @@ export const PaletteTree = () => (
                         <VisuallyHidden>Checkmark</VisuallyHidden>
                         <CheckIcon />
                     </Button>
+                </Variant>
+            </Component>
+        </Category>
+        <Category name="Navigation">
+            <Component name="Breadcrumb">
+                <Variant>
+                    <Breadcrumb>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink href='#'>Docs</BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem isCurrentPage>
+                            <BreadcrumbLink href='#'>Breadcrumb</BreadcrumbLink>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </Variant>
+            </Component>
+            <Component name="Link">
+                <Variant>
+                    <Link>Chakra UI</Link>
+                </Variant>
+                <Variant name="external">
+                    <Link href='https://chakra-ui.com' isExternal>
+                        Chakra Design system <ExternalLinkIcon mx='2px' />
+                    </Link>
+                </Variant>
+            </Component>
+            <Component name="LinkOverlay">
+                <Variant name="LinBox">
+                    <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md'>
+                        <Heading size='md' my='2'>
+                            <LinkOverlay href='#'>
+                                New Year, New Beginnings: Smashing Workshops & Audits
+                            </LinkOverlay>
+                        </Heading>
+                    </LinkBox>
                 </Variant>
             </Component>
         </Category>
