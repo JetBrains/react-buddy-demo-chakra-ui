@@ -185,7 +185,7 @@ export const PaletteTree = () => (
             </Component>
             <Component name="Flex">
                 <Variant>
-                    <Flex color='white'>
+                    <Flex>
                         <Center w='100px' bg='green.500'>
                             <Text>Box 1</Text>
                         </Center>
