@@ -5,6 +5,8 @@
 * Quickly observe available components and variants right in an IDE.
 * Insert components using drag'n'drop or code generation action.
 
+> This demo is actual for Chakra v1.x
+
 Currently, the following categories are fully covered:
 * Layout
 * Forms
