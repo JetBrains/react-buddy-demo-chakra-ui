@@ -138,42 +138,43 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Link, LinkBox, LinkOverlay, Avatar
+    Link, LinkBox, LinkOverlay, Avatar, useDisclosure
 } from "@chakra-ui/react";
 import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, ExternalLinkIcon, SearchIcon} from "@chakra-ui/icons";
 
 export const PaletteTree = () => (
     <Palette>
         <Category name="Layout">
-            <Component name="Box">
+            <Component name="Box" docURL="https://chakra-ui.com/docs/components/center">
                 <Variant>
                     <Box bg='tomato' w='100%' p={4} color='white'>
                         This is the Box
                     </Box>
                 </Variant>
             </Component>
-            <Component name="Center">
+            <Component name="Center" docURL="https://chakra-ui.com/docs/components/center">
                 <Variant>
                     <Center bg='tomato' w='100%' h='100px' color='white'>
                         This is the Center
                     </Center>
                 </Variant>
             </Component>
-            <Component name="Circle">
+            <Component name="Circle" docURL="https://chakra-ui.com/docs/components/center#square-and-circle">
                 <Variant>
                     <Circle size='40px' bg='tomato' color='white'>
                         1
                     </Circle>
                 </Variant>
             </Component>
-            <Component name="Square">
+            <Component name="Square" docURL="https://chakra-ui.com/docs/components/center#square-and-circle">
                 <Variant>
                     <Square size='40px' bg='purple.700' color='white'>
                         2
                     </Square>
                 </Variant>
             </Component>
-            <Component name="Container">
+
+            <Component name="Container" docURL="https://chakra-ui.com/docs/components/container">
                 <Variant>
                     <Container>
                         There are many benefits to a joint design and development system. Not only
@@ -183,7 +184,7 @@ export const PaletteTree = () => (
                     </Container>
                 </Variant>
             </Component>
-            <Component name="Flex">
+            <Component name="Flex" docURL="https://chakra-ui.com/docs/components/flex">
                 <Variant>
                     <Flex>
                         <Center w='100px' bg='green.500'>
@@ -198,7 +199,7 @@ export const PaletteTree = () => (
                     </Flex>
                 </Variant>
             </Component>
-            <Component name="Grid">
+            <Component name="Grid" docURL="https://chakra-ui.com/docs/components/grid">
                 <Variant>
                     <Grid
                         h='200px'
@@ -214,7 +215,7 @@ export const PaletteTree = () => (
                     </Grid>
                 </Variant>
             </Component>
-            <Component name="SimpleGrid">
+            <Component name="SimpleGrid" docURL="https://chakra-ui.com/docs/components/simple-grid">
                 <Variant>
                     <SimpleGrid columns={2} spacing={10} w='100%'>
                         <Box bg='tomato' height='80px'></Box>
@@ -225,7 +226,7 @@ export const PaletteTree = () => (
                     </SimpleGrid>
                 </Variant>
             </Component>
-            <Component name="HStack">
+            <Component name="HStack" docURL="https://chakra-ui.com/docs/components/stack#feature-cards-with-hstack-component">
                 <Variant>
                     <HStack spacing='24px'>
                         <Box w='40px' h='40px' bg='green.100'>1</Box>
@@ -234,7 +235,7 @@ export const PaletteTree = () => (
                     </HStack>
                 </Variant>
             </Component>
-            <Component name="VStack">
+            <Component name="VStack" docURL="https://chakra-ui.com/docs/components/stack#stack-dividers">
                 <Variant>
                     <VStack spacing='24px'>
                         <Box w='40px' h='40px' bg='green.100'>1</Box>
@@ -243,7 +244,7 @@ export const PaletteTree = () => (
                     </VStack>
                 </Variant>
             </Component>
-            <Component name="Wrap">
+            <Component name="Wrap" docURL="https://chakra-ui.com/docs/components/wrap">
                 <Variant>
                     <Wrap>
                         <WrapItem>
@@ -271,7 +272,7 @@ export const PaletteTree = () => (
             </Component>
         </Category>
         <Category name="Forms">
-            <Component name="Button">
+            <Component name="Button" docURL="https://chakra-ui.com/docs/components/button">
                 <Variant>
                     <Button>Button</Button>
                 </Variant>
@@ -310,7 +311,7 @@ export const PaletteTree = () => (
                     </ButtonGroup>
                 </Variant>
             </Component>
-            <Component name="Checkbox">
+            <Component name="Checkbox" docURL="https://chakra-ui.com/docs/components/checkbox">
                 <Variant>
                     <Checkbox defaultChecked>Checkbox</Checkbox>
                 </Variant>
@@ -325,7 +326,7 @@ export const PaletteTree = () => (
                     </Checkbox>
                 </Variant>
             </Component>
-            <Component name="Editable">
+            <Component name="Editable" docURL="https://chakra-ui.com/docs/components/editable">
                 <Variant name="input">
                     <Editable defaultValue='Take some chakra'>
                         <EditablePreview/>
@@ -339,7 +340,7 @@ export const PaletteTree = () => (
                     </Editable>
                 </Variant>
             </Component>
-            <Component name="FormControl" subComponents={[<FormLabel/>, <FormHelperText/>]}>
+            <Component name="FormControl" docURL="https://chakra-ui.com/docs/components/form-control" subComponents={[<FormLabel/>, <FormHelperText/>]}>
                 <Variant>
                     <FormControl>
                         <FormLabel htmlFor='email'>Email address</FormLabel>
@@ -348,12 +349,12 @@ export const PaletteTree = () => (
                     </FormControl>
                 </Variant>
             </Component>
-            <Component name="IconButton">
+            <Component name="IconButton" docURL="https://chakra-ui.com/docs/components/icon-button">
                 <Variant>
                     <IconButton aria-label='Search database' icon={<SearchIcon/>}/>
                 </Variant>
             </Component>
-            <Component name="Input">
+            <Component name="Input" docURL="https://chakra-ui.com/docs/components/input">
                 <Variant>
                     <Input placeholder='Basic usage'/>
                 </Variant>
@@ -373,7 +374,7 @@ export const PaletteTree = () => (
                     <Input pr='4.5rem' type='password' placeholder='Enter password'/>
                 </Variant>
             </Component>
-            <Component name="NumberInput">
+            <Component name="NumberInput" docURL="https://chakra-ui.com/docs/components/number-input">
                 <Variant>
                     <NumberInput step={5} defaultValue={15} min={10} max={30}>
                         <NumberInputField/>
@@ -384,7 +385,7 @@ export const PaletteTree = () => (
                     </NumberInput>
                 </Variant>
             </Component>
-            <Component name="PinInput">
+            <Component name="PinInput" docURL="https://chakra-ui.com/docs/components/pin-input">
                 <Variant>
                     <HStack>
                         <PinInput>
@@ -396,7 +397,7 @@ export const PaletteTree = () => (
                     </HStack>
                 </Variant>
             </Component>
-            <Component name="RadioGroup">
+            <Component name="RadioGroup" docURL="https://chakra-ui.com/docs/components/radio">
                 <Variant>
                     <RadioGroup>
                         <Stack direction='row'>
@@ -407,7 +408,7 @@ export const PaletteTree = () => (
                     </RadioGroup>
                 </Variant>
             </Component>
-            <Component name="RangeSlider">
+            <Component name="RangeSlider" docURL="https://chakra-ui.com/docs/components/range-slider">
                 <Variant>
                     <RangeSlider
                         aria-label={['min', 'max']}
@@ -422,7 +423,7 @@ export const PaletteTree = () => (
                     </RangeSlider>
                 </Variant>
             </Component>
-            <Component name="Select">
+            <Component name="Select" docURL="https://chakra-ui.com/docs/components/select">
                 <Variant>
                     <Select placeholder='Select option'>
                         <option value='option1'>Option 1</option>
@@ -459,7 +460,7 @@ export const PaletteTree = () => (
                     </Select>
                 </Variant>
             </Component>
-            <Component name="Slider">
+            <Component name="Slider" docURL="https://chakra-ui.com/docs/components/slider">
                 <Variant>
                     <Slider aria-label='slider-ex-1' defaultValue={30}>
                         <SliderTrack>
@@ -469,7 +470,7 @@ export const PaletteTree = () => (
                     </Slider>
                 </Variant>
             </Component>
-            <Component name="Switch">
+            <Component name="Switch" docURL="https://chakra-ui.com/docs/components/switch">
                 <Variant>
                     <Switch/>
                 </Variant>
@@ -480,14 +481,14 @@ export const PaletteTree = () => (
                     <Switch size='lg'/>
                 </Variant>
             </Component>
-            <Component name="Textarea">
+            <Component name="Textarea" docURL="https://chakra-ui.com/docs/components/textarea">
                 <Variant>
                     <Textarea placeholder='Here is a sample placeholder'/>
                 </Variant>
             </Component>
         </Category>
         <Category name="Data Display">
-            <Component name="Badge">
+            <Component name="Badge" docURL="https://chakra-ui.com/docs/components/badge">
                 <Variant>
                     <Badge>Default</Badge>
                 </Variant>
@@ -510,12 +511,12 @@ export const PaletteTree = () => (
                     <Badge colorScheme='purple'>New</Badge>
                 </Variant>
             </Component>
-            <Component name="Code">
+            <Component name="Code" docURL="https://chakra-ui.com/docs/components/code">
                 <Variant>
                     <Code>Hello world</Code>
                 </Variant>
             </Component>
-            <Component name="Divider">
+            <Component name="Divider" docURL="https://chakra-ui.com/docs/components/divider">
                 <Variant name="horizontal">
                     <Divider orientation='horizontal'/>
                 </Variant>
@@ -523,14 +524,14 @@ export const PaletteTree = () => (
                     <Divider orientation='vertical'/>
                 </Variant>
             </Component>
-            <Component name="Kbd">
+            <Component name="Kbd" docURL="https://chakra-ui.com/docs/components/kbd">
                 <Variant>
                     <span>
                         <Kbd>shift</Kbd> + <Kbd>H</Kbd>
                     </span>
                 </Variant>
             </Component>
-            <Component name="List" subComponents={[<ListItem/>]}>
+            <Component name="List" docURL="https://chakra-ui.com/docs/components/list" subComponents={[<ListItem/>]}>
                 <Variant name="unordered">
                     <UnorderedList>
                         <ListItem>Lorem ipsum dolor sit amet</ListItem>
@@ -548,7 +549,7 @@ export const PaletteTree = () => (
                     </OrderedList>
                 </Variant>
             </Component>
-            <Component name="Stat">
+            <Component name="Stat" docURL="https://chakra-ui.com/docs/components/stat">
                 <Variant>
                     <Stat>
                         <StatLabel>Collected Fees</StatLabel>
@@ -578,7 +579,7 @@ export const PaletteTree = () => (
                     </StatGroup>
                 </Variant>
             </Component>
-            <Component name="Table">
+            <Component name="Table" docURL="https://chakra-ui.com/docs/components/table">
                 <Variant>
                     <TableContainer>
                         <Table variant='simple'>
@@ -656,7 +657,7 @@ export const PaletteTree = () => (
                     </TableContainer>
                 </Variant>
             </Component>
-            <Component name="Tag">
+            <Component name="Tag" docURL="https://chakra-ui.com/docs/components/tag">
                 <Variant>
                     <Tag>Sample Tag</Tag>
                 </Variant>
@@ -679,7 +680,7 @@ export const PaletteTree = () => (
             </Component>
         </Category>
         <Category name="Feedback">
-            <Component name="Alert">
+            <Component name="Alert" docURL="https://chakra-ui.com/docs/components/alert">
                 <Variant>
                     <Alert status='success' variant='subtle'>
                         <AlertIcon/>
@@ -723,7 +724,7 @@ export const PaletteTree = () => (
                     </Alert>
                 </Variant>
             </Component>
-            <Component name="CircularProgress">
+            <Component name="CircularProgress" docURL="https://chakra-ui.com/docs/components/circular-progress">
                 <Variant>
                     <CircularProgress value={80}/>
                 </Variant>
@@ -736,7 +737,7 @@ export const PaletteTree = () => (
                     <CircularProgress isIndeterminate color='green.300'/>
                 </Variant>
             </Component>
-            <Component name="Progress">
+            <Component name="Progress" docURL="https://chakra-ui.com/docs/components/progress">
                 <Variant>
                     <Progress value={80} w='100%'/>
                 </Variant>
@@ -744,7 +745,7 @@ export const PaletteTree = () => (
                     <Progress size='xs' w='100%' isIndeterminate/>
                 </Variant>
             </Component>
-            <Component name="Skeleton">
+            <Component name="Skeleton" docURL="https://chakra-ui.com/docs/components/skeleton">
                 <Variant>
                     <Stack>
                         <Skeleton height='20px'/>
@@ -759,19 +760,19 @@ export const PaletteTree = () => (
                     </Box>
                 </Variant>
             </Component>
-            <Component name="Spinner">
+            <Component name="Spinner" docURL="https://chakra-ui.com/docs/components/spinner">
                 <Variant>
                     <Spinner/>
                 </Variant>
             </Component>
-            <Component name="Toast">
+            <Component name="Toast" docURL="https://chakra-ui.com/docs/components/toast">
                 <Variant proto={ToastProto}/>
             </Component>
         </Category>
         <Category name="Typography">
-            <Component name="Text">
+            <Component name="Text" docURL="https://chakra-ui.com/docs/components/text">
                 <Variant name="truncated">
-                    <Text color='gray.500' isTruncated>
+                    <Text color='gray.500' noOfLines={1}>
                         Lorem ipsum is placeholder text commonly used in the graphic, print, and
                         publishing industries for previewing layouts and visual mockups.
                     </Text>
@@ -847,14 +848,14 @@ export const PaletteTree = () => (
                     <Text as='sup'>sup</Text>
                 </Variant>
             </Component>
-            <Component name="Heading">
+            <Component name="Heading" docURL="https://chakra-ui.com/docs/components/heading">
                 <Variant name="h1">
-                    <Heading as='h1' size='4xl' isTruncated>
+                    <Heading as='h1' size='4xl' noOfLines={1}>
                         (4xl) In love with React & Next
                     </Heading>
                 </Variant>
                 <Variant name="h2">
-                    <Heading as='h2' size='3xl' isTruncated>
+                    <Heading as='h2' size='3xl' noOfLines={1}>
                         (3xl) In love with React & Next
                     </Heading>
                 </Variant>
@@ -881,38 +882,10 @@ export const PaletteTree = () => (
             </Component>
         </Category>
         <Category name="Overlay">
-            <Component name="AlertDialog">
-                <Variant>
-                    <AlertDialog
-                        motionPreset='slideInBottom'
-                        isOpen={true}
-                        leastDestructiveRef={undefined/*todo*/}
-                        onClose={() => {/*todo*/
-                        }}
-                        isCentered
-                    >
-                        <AlertDialogOverlay/>
-                        <AlertDialogContent>
-                            <AlertDialogHeader>Discard Changes?</AlertDialogHeader>
-                            <AlertDialogCloseButton/>
-                            <AlertDialogBody>
-                                Are you sure you want to discard all of your notes? 44 words will be
-                                deleted.
-                            </AlertDialogBody>
-                            <AlertDialogFooter>
-                                <Button onClick={() => {/*todo*/
-                                }}>
-                                    No
-                                </Button>
-                                <Button colorScheme='red' ml={3}>
-                                    Yes
-                                </Button>
-                            </AlertDialogFooter>
-                        </AlertDialogContent>
-                    </AlertDialog>
-                </Variant>
+            <Component name="AlertDialog" docURL="https://chakra-ui.com/docs/components/alert-dialog">
+                <Variant proto={AlertDialogProto}/>
             </Component>
-            <Component name="Drawer">
+            <Component name="Drawer" docURL="https://chakra-ui.com/docs/components/drawer">
                 <Variant>
                     <Drawer
                         isOpen={true}
@@ -941,7 +914,7 @@ export const PaletteTree = () => (
                     </Drawer>
                 </Variant>
             </Component>
-            <Component name="Menu">
+            <Component name="Menu" docURL="https://chakra-ui.com/docs/components/menu">
                 <Variant>
                     <Menu>
                         <MenuButton as={Button} rightIcon={<ChevronDownIcon/>}>
@@ -957,7 +930,7 @@ export const PaletteTree = () => (
                     </Menu>
                 </Variant>
             </Component>
-            <Component name="Modal">
+            <Component name="Modal" docURL="https://chakra-ui.com/docs/components/modal">
                 <Variant>
                     <Modal isOpen={true} onClose={() => {/*todo*/
                     }}>
@@ -980,7 +953,7 @@ export const PaletteTree = () => (
                     </Modal>
                 </Variant>
             </Component>
-            <Component name="Popover">
+            <Component name="Popover" docURL="https://chakra-ui.com/docs/components/popover">
                 <Variant>
                     <Popover>
                         <PopoverTrigger>
@@ -995,7 +968,7 @@ export const PaletteTree = () => (
                     </Popover>
                 </Variant>
             </Component>
-            <Component name="Tooltip">
+            <Component name="Tooltip" docURL="https://chakra-ui.com/docs/components/tooltip">
                 <Variant>
                     <Tooltip label="Hey, I'm here!" aria-label='A tooltip'>
                         Hover me
@@ -1004,7 +977,7 @@ export const PaletteTree = () => (
             </Component>
         </Category>
         <Category name="Disclosure">
-            <Component name="Accordion">
+            <Component name="Accordion" docURL="https://chakra-ui.com/docs/components/accordion">
                 <Variant>
                     <Accordion>
                         <AccordionItem>
@@ -1043,7 +1016,7 @@ export const PaletteTree = () => (
                     </Accordion>
                 </Variant>
             </Component>
-            <Component name="Tabs">
+            <Component name="Tabs" docURL="https://chakra-ui.com/docs/components/tabs">
                 <Variant>
                     <Tabs>
                         <TabList>
@@ -1065,7 +1038,7 @@ export const PaletteTree = () => (
                     </Tabs>
                 </Variant>
             </Component>
-            <Component name="VisuallyHidden">
+            <Component name="VisuallyHidden" docURL="https://chakra-ui.com/docs/components/visually-hidden">
                 <Variant>
                     <Button>
                         <VisuallyHidden>Checkmark</VisuallyHidden>
@@ -1075,7 +1048,7 @@ export const PaletteTree = () => (
             </Component>
         </Category>
         <Category name="Navigation">
-            <Component name="Breadcrumb">
+            <Component name="Breadcrumb" docURL="https://chakra-ui.com/docs/components/breadcrumb">
                 <Variant>
                     <Breadcrumb>
                         <BreadcrumbItem>
@@ -1090,7 +1063,7 @@ export const PaletteTree = () => (
                     </Breadcrumb>
                 </Variant>
             </Component>
-            <Component name="Link">
+            <Component name="Link" docURL="https://chakra-ui.com/docs/components/link">
                 <Variant>
                     <Link>Chakra UI</Link>
                 </Variant>
@@ -1100,7 +1073,7 @@ export const PaletteTree = () => (
                     </Link>
                 </Variant>
             </Component>
-            <Component name="LinkOverlay">
+            <Component name="LinkOverlay" docURL="https://chakra-ui.com/docs/components/link-overlay">
                 <Variant name="LinBox">
                     <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md'>
                         <Heading size='md' my='2'>
@@ -1113,7 +1086,7 @@ export const PaletteTree = () => (
             </Component>
         </Category>
         <Category name="Media and Icons">
-            <Component name="Avatar">
+            <Component name="Avatar" docURL="https://chakra-ui.com/docs/components/avatar">
                 <Variant>
                     <Wrap>
                         <WrapItem>
@@ -1140,13 +1113,13 @@ export const PaletteTree = () => (
                     </Wrap>
                 </Variant>
             </Component>
-            <Component name="Icon">
+            <Component name="Icon" docURL="https://chakra-ui.com/docs/components/icon">
                 <Variant>
                     <AddIcon w={6} h={6} />
                 </Variant>
                 {/*todo provide all icons*/}
             </Component>
-            <Component name="Image">
+            <Component name="Image" docURL="https://chakra-ui.com/docs/components/image">
                 <Variant>
                     <Box boxSize='sm'>
                         <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
@@ -1174,5 +1147,46 @@ export function ToastProto() {
         >
             Show Toast
         </Button>
+    )
+}
+
+export function AlertDialogProto() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const cancelRef = React.useRef()
+
+    // @ts-ignore
+    return (
+        <>
+            <Button colorScheme='red' onClick={onOpen}>
+                Delete Customer
+            </Button>
+
+            <AlertDialog
+                isOpen={isOpen}
+                leastDestructiveRef={cancelRef}
+                onClose={onClose}
+            >
+                <AlertDialogOverlay>
+                    <AlertDialogContent>
+                        <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                            Delete Customer
+                        </AlertDialogHeader>
+
+                        <AlertDialogBody>
+                            Are you sure? You can't undo this action afterwards.
+                        </AlertDialogBody>
+
+                        <AlertDialogFooter>
+                            <Button ref={cancelRef} onClick={onClose}>
+                                Cancel
+                            </Button>
+                            <Button colorScheme='red' onClick={onClose} ml={3}>
+                                Delete
+                            </Button>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialogOverlay>
+            </AlertDialog>
+        </>
     )
 }
