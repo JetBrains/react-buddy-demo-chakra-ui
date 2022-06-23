@@ -145,7 +145,7 @@ import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, ExternalLinkIcon, Search
 export const PaletteTree = () => (
     <Palette>
         <Category name="Layout">
-            <Component name="Box" docURL="https://chakra-ui.com/docs/components/center">
+            <Component name="Box" docURL="https://chakra-ui.com/docs/components/box">
                 <Variant>
                     <Box bg='tomato' w='100%' p={4} color='white'>
                         This is the Box
