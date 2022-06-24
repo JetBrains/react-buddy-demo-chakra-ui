@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {
     Category,
     Component,
@@ -1152,9 +1152,8 @@ export function ToastProto() {
 
 export function AlertDialogProto() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const cancelRef = React.useRef()
+    const cancelRef = useRef<HTMLButtonElement>(null)
 
-    // @ts-ignore
     return (
         <>
             <Button colorScheme='red' onClick={onOpen}>
