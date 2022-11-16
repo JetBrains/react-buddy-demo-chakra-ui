@@ -15,7 +15,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.3.12",
-    "@react-buddy/ide-toolbox": "^2.2.0"
+    "@react-buddy/ide-toolbox": "^2.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.14",

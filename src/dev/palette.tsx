@@ -517,10 +517,10 @@ export const PaletteTree = () => (
                 </Variant>
             </Component>
             <Component name="Divider" docURL="https://chakra-ui.com/docs/components/divider">
-                <Variant name="horizontal">
-                    <Divider orientation='horizontal'/>
+                <Variant>
+                    <Divider />
                 </Variant>
-                <Variant name="vertical">
+                <Variant name="vertical" style={{height: '100%'}}>
                     <Divider orientation='vertical'/>
                 </Variant>
             </Component>
@@ -746,7 +746,7 @@ export const PaletteTree = () => (
                 </Variant>
             </Component>
             <Component name="Skeleton" docURL="https://chakra-ui.com/docs/components/skeleton">
-                <Variant>
+                <Variant previewLayout="stretch">
                     <Stack>
                         <Skeleton height='20px'/>
                         <Skeleton height='20px'/>
@@ -978,7 +978,7 @@ export const PaletteTree = () => (
         </Category>
         <Category name="Disclosure">
             <Component name="Accordion" docURL="https://chakra-ui.com/docs/components/accordion">
-                <Variant>
+                <Variant previewLayout="stretch">
                     <Accordion>
                         <AccordionItem>
                             <h2>
